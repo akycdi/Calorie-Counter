@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 
 const options = {
     method: 'GET',
@@ -8,7 +9,7 @@ const options = {
         'nutrition-type': 'logging'
     },
     headers: {
-        'X-RapidAPI-Key': '95cfb9760cmshadff21d90107fe6p182ba8jsnf672248db8b9',
+        'X-RapidAPI-Key': process.env.RapidAPIKey,
         'X-RapidAPI-Host': 'edamam-edamam-nutrition-analysis.p.rapidapi.com'
     }
 };
